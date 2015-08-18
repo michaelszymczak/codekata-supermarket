@@ -42,5 +42,9 @@ public class Weight {
                 "grams=" + grams +
                 '}';
     }
+
+    public double in(Weight otherWeight) {
+        return (double) this.getGrams() / otherWeight.getGrams();
+    }
 }
 

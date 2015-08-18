@@ -19,6 +19,6 @@ public class SingleProductPrice {
         if (! this.product.equals(product)) {
             throw new ProductAndPriceMismatch("Cannot calculate " + this.product + " price for " + product);
         }
-        return price.times(quantity);
+        return price.times(quantity.getHowMany());
     }
 }

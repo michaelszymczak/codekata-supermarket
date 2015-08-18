@@ -16,8 +16,12 @@ public class Money {
         this.pence = pence;
     }
 
-    public Money times(Quantity quantity) {
-        return Money.ofPence(pence * quantity.getHowMany());
+    public Money times(long multiplier) {
+        return Money.ofPence(pence * multiplier);
+    }
+
+    public Money times(double multiplier) {
+        return Money.ofPence((long) Math.ceil((double) pence * multiplier));
     }
 
     @Override
