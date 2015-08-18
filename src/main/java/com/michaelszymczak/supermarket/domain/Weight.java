@@ -1,7 +1,5 @@
 package com.michaelszymczak.supermarket.domain;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class Weight {
     private long grams;
