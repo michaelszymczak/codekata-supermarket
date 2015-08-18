@@ -40,4 +40,12 @@ public class Quantity {
                 "howMany=" + howMany +
                 '}';
     }
+
+    public Quantity reminder(Quantity dividend) {
+        if (howMany == 0) {
+            return dividend;
+        } else {
+            return Quantity.of(dividend.getHowMany() % howMany);
+        }
+    }
 }

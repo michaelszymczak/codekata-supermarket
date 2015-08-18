@@ -21,4 +21,8 @@ public class PromotionalProductPrice {
         }
         return referencePrice.times(quantity.getHowMany() / referenceQuantity.getHowMany());
     }
+
+    public Quantity notQualify(Quantity candidates) {
+        return referenceQuantity.reminder(candidates);
+    }
 }
