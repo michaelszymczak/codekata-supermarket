@@ -1,0 +1,23 @@
+apply plugin: 'java'
+sourceCompatibility = 1.8
+version = "0.1"
+description = "Acme app"
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.michaelszymczak.supermarket.App'
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.7'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-all:1.8.4'
+
+}
