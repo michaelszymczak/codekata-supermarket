@@ -5,7 +5,7 @@ import com.michaelszymczak.supermarket.domain.Quantity;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.michaelszymczak.supermarket.domain.Money.ofPence;
+import static com.michaelszymczak.supermarket.domain.Money.pence;
 import static org.hamcrest.CoreMatchers.is;
 
 public class SingleProductPriceShould {
@@ -14,11 +14,11 @@ public class SingleProductPriceShould {
     public void calculate_price_for_product() throws Exception {
     //        Given
         Product snickers = new Product("SNICKERS");
-        SingleProductPrice snickersPrice = new SingleProductPrice(snickers, ofPence(75));
+        SingleProductPrice snickersPrice = new SingleProductPrice(snickers, pence(75));
     //        Then
-        Assert.assertThat(snickersPrice.calculateFor(snickers, Quantity.of(1)), is(ofPence(75)));
-        Assert.assertThat(snickersPrice.calculateFor(snickers, Quantity.of(2)), is(ofPence(150)));
-        Assert.assertThat(snickersPrice.calculateFor(snickers, Quantity.of(0)), is(ofPence(0)));
+        Assert.assertThat(snickersPrice.calculateFor(snickers, Quantity.items(1)), is(pence(75)));
+        Assert.assertThat(snickersPrice.calculateFor(snickers, Quantity.items(2)), is(pence(150)));
+        Assert.assertThat(snickersPrice.calculateFor(snickers, Quantity.items(0)), is(pence(0)));
     }
 
     @Test(expected = ProductAndPriceMismatch.class)
@@ -26,9 +26,9 @@ public class SingleProductPriceShould {
     //        Given
         Product snickers = new Product("SNICKERS");
         Product mars = new Product("MARS");
-        SingleProductPrice snickersPrice = new SingleProductPrice(snickers, ofPence(75));
+        SingleProductPrice snickersPrice = new SingleProductPrice(snickers, pence(75));
     //        When
-        snickersPrice.calculateFor(mars, Quantity.of(1));
+        snickersPrice.calculateFor(mars, Quantity.items(1));
     }
 
 

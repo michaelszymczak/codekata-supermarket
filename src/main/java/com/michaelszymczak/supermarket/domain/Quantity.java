@@ -3,7 +3,7 @@ package com.michaelszymczak.supermarket.domain;
 public class Quantity {
     private final long howMany;
 
-    public static Quantity of(long howMany) {
+    public static Quantity items(long howMany) {
         return new Quantity(howMany);
     }
 
@@ -45,7 +45,7 @@ public class Quantity {
         if (howMany == 0) {
             return dividend;
         } else {
-            return Quantity.of(dividend.getHowMany() % howMany);
+            return Quantity.items(dividend.getHowMany() % howMany);
         }
     }
 }

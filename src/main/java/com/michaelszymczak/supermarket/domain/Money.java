@@ -3,7 +3,7 @@ package com.michaelszymczak.supermarket.domain;
 public class Money {
     private final long pence;
 
-    public static Money ofPence(long pence) {
+    public static Money pence(long pence) {
         return new Money(pence);
     }
 
@@ -15,11 +15,11 @@ public class Money {
     }
 
     public Money times(long multiplier) {
-        return Money.ofPence(pence * multiplier);
+        return Money.pence(pence * multiplier);
     }
 
     public Money times(double multiplier) {
-        return Money.ofPence((long) Math.ceil((double) pence * multiplier));
+        return Money.pence((long) Math.ceil((double) pence * multiplier));
     }
 
     @Override

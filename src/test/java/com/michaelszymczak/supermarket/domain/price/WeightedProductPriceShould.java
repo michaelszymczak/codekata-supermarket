@@ -7,7 +7,7 @@ import com.michaelszymczak.supermarket.domain.Weight;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.michaelszymczak.supermarket.domain.Money.ofPence;
+import static com.michaelszymczak.supermarket.domain.Money.pence;
 import static org.hamcrest.CoreMatchers.is;
 
 public class WeightedProductPriceShould {
@@ -16,10 +16,10 @@ public class WeightedProductPriceShould {
     public void calculate_price_for_product() throws Exception {
     //        Given
         Product carrots = new Product("CARROT");
-        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.ofGrams(100), Money.ofPence(10));
+        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.ofGrams(100), Money.pence(10));
     //        Then
-        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.ofGrams(500)), is(ofPence(50)));
-        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.ofGrams(10)), is(ofPence(1)));
+        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.ofGrams(500)), is(pence(50)));
+        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.ofGrams(10)), is(pence(1)));
     }
 
     @Test(expected = ProductAndPriceMismatch.class)
@@ -27,7 +27,7 @@ public class WeightedProductPriceShould {
     //        Given
         Product carrots = new Product("CARROT");
         Product tomatoes = new Product("TOMATO");
-        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.ofGrams(100), Money.ofPence(10));
+        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.ofGrams(100), Money.pence(10));
     //        When
         carrotPrice.calculateFor(tomatoes, Weight.ofGrams(500));
     }
