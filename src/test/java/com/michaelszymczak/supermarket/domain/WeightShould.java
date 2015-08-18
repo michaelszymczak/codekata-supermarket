@@ -12,26 +12,26 @@ public class WeightShould {
 
     @Test
     public void create_value_object_with_weight_in_grams() throws Exception {
-        Assert.assertEquals(Weight.ofGrams(100).getGrams(), 100);
+        Assert.assertEquals(Weight.grams(100).getGrams(), 100);
     }
 
     @Test
     public void be_comparable() throws Exception {
-        assertThat(Weight.ofGrams(1), is(Weight.ofGrams(1)));
-        assertThat(Weight.ofGrams(1), is(not(Weight.ofGrams(2))));
+        assertThat(Weight.grams(1), is(Weight.grams(1)));
+        assertThat(Weight.grams(1), is(not(Weight.grams(2))));
     }
 
     @Test(expected = IllegalWeight.class)
     public void prevent_from_creating_incorrect_weight() throws Exception {
-        Weight.ofGrams(-1);
+        Weight.grams(-1);
     }
 
     @Test
     public void compare_itself_to_another_weight() throws Exception {
     //        Given
-        Weight _100_grams = Weight.ofGrams(100);
-        Weight _50_grams = Weight.ofGrams(50);
-        Weight _30_grams = Weight.ofGrams(30);
+        Weight _100_grams = Weight.grams(100);
+        Weight _50_grams = Weight.grams(50);
+        Weight _30_grams = Weight.grams(30);
     //        Then
         Assert.assertThat(_100_grams.in(_50_grams), is(closeTo(2.0, 0.001)));
         Assert.assertThat(_50_grams.in(_50_grams), is(1.0));

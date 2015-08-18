@@ -16,10 +16,10 @@ public class WeightedProductPriceShould {
     public void calculate_price_for_product() throws Exception {
     //        Given
         Product carrots = new Product("CARROT");
-        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.ofGrams(100), Money.pence(10));
+        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.grams(100), Money.pence(10));
     //        Then
-        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.ofGrams(500)), is(pence(50)));
-        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.ofGrams(10)), is(pence(1)));
+        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.grams(500)), is(pence(50)));
+        Assert.assertThat(carrotPrice.calculateFor(carrots, Weight.grams(10)), is(pence(1)));
     }
 
     @Test(expected = ProductAndPriceMismatch.class)
@@ -27,9 +27,9 @@ public class WeightedProductPriceShould {
     //        Given
         Product carrots = new Product("CARROT");
         Product tomatoes = new Product("TOMATO");
-        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.ofGrams(100), Money.pence(10));
+        WeightedProductPrice carrotPrice = new WeightedProductPrice(carrots, Weight.grams(100), Money.pence(10));
     //        When
-        carrotPrice.calculateFor(tomatoes, Weight.ofGrams(500));
+        carrotPrice.calculateFor(tomatoes, Weight.grams(500));
     }
 
 

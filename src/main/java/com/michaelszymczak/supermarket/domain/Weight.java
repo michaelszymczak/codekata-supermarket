@@ -4,7 +4,7 @@ package com.michaelszymczak.supermarket.domain;
 public class Weight {
     private long grams;
 
-    public static Weight ofGrams(long grams) {
+    public static Weight grams(long grams) {
         return new Weight(grams);
     }
 

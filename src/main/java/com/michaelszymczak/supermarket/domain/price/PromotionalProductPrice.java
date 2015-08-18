@@ -6,9 +6,9 @@ import com.michaelszymczak.supermarket.domain.Quantity;
 
 public class PromotionalProductPrice {
     private final Product product;
+
     private final Quantity referenceQuantity;
     private final Money referencePrice;
-
     public PromotionalProductPrice(Product product, Quantity referenceQuantity, Money referencePrice) {
 
         this.product = product;
@@ -21,6 +21,10 @@ public class PromotionalProductPrice {
             throw new ProductAndPriceMismatch("Cannot calculate " + this.product + " price for " + product);
         }
         return referencePrice.times(quantity.getHowMany() / referenceQuantity.getHowMany());
+    }
+
+    public Product getProduct() {
+        return product;
     }
 
     public Quantity notQualify(Quantity candidates) {

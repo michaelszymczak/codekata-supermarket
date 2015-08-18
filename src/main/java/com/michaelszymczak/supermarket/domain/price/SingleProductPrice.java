@@ -6,8 +6,8 @@ import com.michaelszymczak.supermarket.domain.Quantity;
 
 public class SingleProductPrice {
     private final Product product;
-    private final Money price;
 
+    private final Money price;
     public SingleProductPrice(Product product, Money price) {
         if (product == null || price == null) {
             throw new IllegalArgumentException("Product and price must not be null");
@@ -22,4 +22,9 @@ public class SingleProductPrice {
         }
         return price.times(quantity.getHowMany());
     }
+
+    public Product getProduct() {
+        return product;
+    }
+
 }

@@ -6,9 +6,9 @@ import com.michaelszymczak.supermarket.domain.Weight;
 
 public class WeightedProductPrice {
     private final Product product;
+
     private final Weight referenceWeight;
     private final Money referencePrice;
-
     public WeightedProductPrice(Product product, Weight referenceWeight, Money referencePrice) {
 
         this.product = product;
@@ -21,5 +21,9 @@ public class WeightedProductPrice {
             throw new ProductAndPriceMismatch("Cannot calculate " + this.product + " price for " + product);
         }
         return referencePrice.times(weight.in(referenceWeight));
+    }
+
+    public Product getProduct() {
+        return product;
     }
 }
