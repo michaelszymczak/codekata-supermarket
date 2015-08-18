@@ -1,5 +1,6 @@
-package com.michaelszymczak.supermarket.domain.pricing;
+package com.michaelszymczak.supermarket.domain.price;
 
+import com.michaelszymczak.supermarket.domain.Money;
 import com.michaelszymczak.supermarket.domain.Product;
 import com.michaelszymczak.supermarket.domain.Weight;
 

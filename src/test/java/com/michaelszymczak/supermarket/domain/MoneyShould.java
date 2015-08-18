@@ -1,4 +1,4 @@
-package com.michaelszymczak.supermarket.domain.pricing;
+package com.michaelszymczak.supermarket.domain;
 
 import org.junit.Test;
 

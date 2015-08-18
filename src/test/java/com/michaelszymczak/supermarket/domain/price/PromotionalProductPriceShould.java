@@ -1,12 +1,11 @@
-package com.michaelszymczak.supermarket.domain.pricing;
+package com.michaelszymczak.supermarket.domain.price;
 
 import com.michaelszymczak.supermarket.domain.Product;
 import com.michaelszymczak.supermarket.domain.Quantity;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.michaelszymczak.supermarket.domain.pricing.Money.ofPence;
+import static com.michaelszymczak.supermarket.domain.Money.ofPence;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 

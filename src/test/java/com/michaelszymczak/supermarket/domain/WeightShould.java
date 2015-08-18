@@ -1,6 +1,5 @@
 package com.michaelszymczak.supermarket.domain;
 
-import org.hamcrest.number.IsCloseTo;
 import org.junit.Assert;
 import org.junit.Test;
 

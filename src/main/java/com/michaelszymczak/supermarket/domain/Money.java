@@ -1,6 +1,4 @@
-package com.michaelszymczak.supermarket.domain.pricing;
-
-import com.michaelszymczak.supermarket.domain.Quantity;
+package com.michaelszymczak.supermarket.domain;
 
 public class Money {
     private final long pence;
