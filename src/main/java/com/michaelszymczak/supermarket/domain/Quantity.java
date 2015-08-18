@@ -33,4 +33,11 @@ public class Quantity {
     public int hashCode() {
         return (int) (howMany ^ (howMany >>> 32));
     }
+
+    @Override
+    public String toString() {
+        return "Quantity{" +
+                "howMany=" + howMany +
+                '}';
+    }
 }

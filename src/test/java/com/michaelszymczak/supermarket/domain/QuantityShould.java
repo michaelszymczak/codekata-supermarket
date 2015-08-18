@@ -11,12 +11,7 @@ public class QuantityShould {
 
     @Test
     public void create_value_object_with_quantity() throws Exception {
-    //        Given
-        Quantity quantity = Quantity.of(10);
-    //        When
-        long howMany = quantity.getHowMany();
-    //        Then
-        Assert.assertEquals(howMany, 10);
+        Assert.assertEquals(Quantity.of(10).getHowMany(), 10);
     }
 
     @Test

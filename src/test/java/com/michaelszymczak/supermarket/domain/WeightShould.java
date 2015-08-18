@@ -11,12 +11,7 @@ public class WeightShould {
 
     @Test
     public void create_value_object_with_weight_in_grams() throws Exception {
-    //        Given
-        Weight weight = Weight.ofGrams(100);
-    //        When
-        long weightInGrams = weight.getGrams();
-    //        Then
-        Assert.assertEquals(weightInGrams, 100);
+        Assert.assertEquals(Weight.ofGrams(100).getGrams(), 100);
     }
 
     @Test

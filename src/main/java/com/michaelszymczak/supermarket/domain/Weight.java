@@ -36,5 +36,13 @@ public class Weight {
     public int hashCode() {
         return (int) (grams ^ (grams >>> 32));
     }
+
+
+    @Override
+    public String toString() {
+        return "Weight{" +
+                "grams=" + grams +
+                '}';
+    }
 }
 
