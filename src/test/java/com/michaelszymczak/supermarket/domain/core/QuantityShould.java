@@ -1,5 +1,7 @@
-package com.michaelszymczak.supermarket.domain;
+package com.michaelszymczak.supermarket.domain.core;
 
+import com.michaelszymczak.supermarket.domain.core.IllegalQuantity;
+import com.michaelszymczak.supermarket.domain.core.Quantity;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,6 +14,13 @@ public class QuantityShould {
     @Test
     public void create_value_object_with_quantity() throws Exception {
         Assert.assertEquals(Quantity.items(10).getHowMany(), 10);
+    }
+
+    @Test
+    public void tell_when_is_empty() throws Exception {
+        Assert.assertFalse(Quantity.items(1).isEmpty());
+        Assert.assertFalse(Quantity.items(2).isEmpty());
+        Assert.assertTrue(Quantity.items(0).isEmpty());
     }
 
     @Test

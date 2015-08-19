@@ -1,4 +1,4 @@
-package com.michaelszymczak.supermarket.domain;
+package com.michaelszymczak.supermarket.domain.core;
 
 public class Quantity {
     private final long howMany;
@@ -16,6 +16,10 @@ public class Quantity {
 
     public long getHowMany() {
         return howMany;
+    }
+
+    public boolean isEmpty() {
+        return (howMany <= 0);
     }
 
     @Override

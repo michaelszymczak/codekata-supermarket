@@ -1,13 +1,13 @@
 package com.michaelszymczak.supermarket.domain.price;
 
-import com.michaelszymczak.supermarket.domain.Money;
-import com.michaelszymczak.supermarket.domain.Product;
-import com.michaelszymczak.supermarket.domain.Weight;
+import com.michaelszymczak.supermarket.domain.core.Money;
+import com.michaelszymczak.supermarket.domain.core.Product;
+import com.michaelszymczak.supermarket.domain.core.Weight;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.michaelszymczak.supermarket.domain.Money.pence;
+import static com.michaelszymczak.supermarket.domain.core.Money.pence;
 import static org.hamcrest.CoreMatchers.is;
 
 public class WeightedProductPriceShould {

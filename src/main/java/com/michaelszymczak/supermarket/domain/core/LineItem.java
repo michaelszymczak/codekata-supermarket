@@ -1,9 +1,4 @@
-package com.michaelszymczak.supermarket.domain.pricing;
-
-import com.michaelszymczak.supermarket.domain.Money;
-import com.michaelszymczak.supermarket.domain.Product;
-import com.michaelszymczak.supermarket.domain.Quantity;
-import com.michaelszymczak.supermarket.domain.Weight;
+package com.michaelszymczak.supermarket.domain.core;
 
 public class LineItem {
     private final Product product;
@@ -24,6 +19,10 @@ public class LineItem {
         this.quantity = quantity;
         this.weight = weight;
         this.priceForAllProducts = priceForAllProducts;
+    }
+
+    public Money getPrice() {
+        return priceForAllProducts;
     }
 
     @Override

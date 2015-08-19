@@ -1,6 +1,7 @@
-package com.michaelszymczak.supermarket.domain;
+package com.michaelszymczak.supermarket.domain.core;
 
 public class Money {
+    public static final Money NOTHING = Money.pence(0);
     private final long pence;
 
     public static Money pence(long pence) {
@@ -14,13 +15,10 @@ public class Money {
         this.pence = pence;
     }
 
-    public Money times(long multiplier) {
-        return Money.pence(pence * multiplier);
-    }
-
-    public Money times(double multiplier) {
-        return Money.pence((long) Math.ceil((double) pence * multiplier));
-    }
+    public Money adding(Money moneyToAdd) { return Money.pence(pence + moneyToAdd.pence); }
+    public Money times(long multiplier) { return Money.pence(pence * multiplier); }
+    public Money times(double multiplier) { return Money.pence((long) Math.ceil((double) pence * multiplier)); }
+    public long  getPence() { return pence; }
 
     @Override
     public boolean equals(Object o) {

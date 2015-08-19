@@ -1,8 +1,8 @@
 package com.michaelszymczak.supermarket.domain.price;
 
-import com.michaelszymczak.supermarket.domain.Money;
-import com.michaelszymczak.supermarket.domain.Product;
-import com.michaelszymczak.supermarket.domain.Quantity;
+import com.michaelszymczak.supermarket.domain.core.Money;
+import com.michaelszymczak.supermarket.domain.core.Product;
+import com.michaelszymczak.supermarket.domain.core.Quantity;
 
 public class SingleProductPrice {
     private final Product product;

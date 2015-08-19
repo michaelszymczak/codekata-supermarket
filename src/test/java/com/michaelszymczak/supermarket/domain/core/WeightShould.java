@@ -1,5 +1,7 @@
-package com.michaelszymczak.supermarket.domain;
+package com.michaelszymczak.supermarket.domain.core;
 
+import com.michaelszymczak.supermarket.domain.core.IllegalWeight;
+import com.michaelszymczak.supermarket.domain.core.Weight;
 import org.junit.Assert;
 import org.junit.Test;
 

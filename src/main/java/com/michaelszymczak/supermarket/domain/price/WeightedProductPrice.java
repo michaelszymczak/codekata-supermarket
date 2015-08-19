@@ -1,8 +1,8 @@
 package com.michaelszymczak.supermarket.domain.price;
 
-import com.michaelszymczak.supermarket.domain.Money;
-import com.michaelszymczak.supermarket.domain.Product;
-import com.michaelszymczak.supermarket.domain.Weight;
+import com.michaelszymczak.supermarket.domain.core.Money;
+import com.michaelszymczak.supermarket.domain.core.Product;
+import com.michaelszymczak.supermarket.domain.core.Weight;
 
 public class WeightedProductPrice {
     private final Product product;

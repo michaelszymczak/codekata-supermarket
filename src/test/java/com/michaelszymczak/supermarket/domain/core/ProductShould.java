@@ -1,5 +1,7 @@
-package com.michaelszymczak.supermarket.domain;
+package com.michaelszymczak.supermarket.domain.core;
 
+import com.michaelszymczak.supermarket.domain.core.IllegalCode;
+import com.michaelszymczak.supermarket.domain.core.Product;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

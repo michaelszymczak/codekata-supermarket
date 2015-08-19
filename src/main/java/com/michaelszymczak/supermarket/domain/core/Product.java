@@ -1,4 +1,4 @@
-package com.michaelszymczak.supermarket.domain;
+package com.michaelszymczak.supermarket.domain.core;
 
 public class Product {
     private final String code;
